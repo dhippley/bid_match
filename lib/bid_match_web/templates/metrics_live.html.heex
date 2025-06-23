@@ -1,0 +1,14 @@
+<div>
+  <h1>Metrics</h1>
+  <ul>
+    <%= for {event, data} <- @metrics do %>
+      <li>
+        <strong>{inspect(event)}</strong>
+        <ul>
+          <li>Measurements: {inspect(data.measurements)}</li>
+          <li>Metadata: {inspect(data.metadata)}</li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</div>
